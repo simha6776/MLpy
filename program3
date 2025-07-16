@@ -1,0 +1,16 @@
+
+from sklearn import tree
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+data = pd.read_csv("tennisdata.csv")
+X = data.iloc[:,
+-1]
+y = data.iloc[:, -1]
+le
+LabelEncoder()
+for col in X.columns:
+X[col] le.fit_transform(X[col])
+H
+y = le.fit_transform(y)
+model = tree.DecisionTreeClassifier() model.fit(x, y)
+tree.plot_tree (model)
