@@ -1,0 +1,13 @@
+
+import csv
+with open("trainingdata.csv", "r") as file: data = list(csv.reader(file))
+data
+=
+[row for row in data if row[-1] ==
+=
+hypothesis data[0][:-1]
+for row in data:
+for i in range(len(hypothesis)): if hypothesis[i] != row[i]: hypothesis[i] = '?'
+print("Final Hypothesis:", hypothesis)
+"Yes" ]
+Final Hypothesis: ['Sunny', 'Warm', '?', 'Strong', '?', '?']
