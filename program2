@@ -1,0 +1,24 @@
+
+import pandas as pd import numpy as np
+data = pd.read_csv("trainingdata.csv")
+X = np.array(data.iloc[:,
+-1])
+y = np.array(data.iloc[:, -1])
+specific = X[0].copy()
+general = [["?" for in specific] for
+for i, val in enumerate(X):
+if y[i] == "Yes":
+for i in range(len(specific)):
+if specific[j] != val[j]:
+specific[j] = "?"
+-
+in specific]
+else:
+general[j][j] = "?"
+for j in range(len(specific)):
+general =
+if specific[j] != val[j]:
+general[j][j] = specific[j]
+[g for g in general if g != ["?"] • len(specific)]
+print("Final Specific Hypothesis:", specific)
+print("Final General Hypotheses: ", general)
