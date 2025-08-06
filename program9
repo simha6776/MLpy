@@ -1,0 +1,13 @@
+
+In [10]: #9. Write a program to implement k-Means clustering algorithm to clust import pandas as pd
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+data = pd.read_csv("kmeans_sample_data.csv") X = data[ [ 'X', 'Y']]
+model KMeans (n_clusters=3)
+=
+data['Cluster'] = model.fit_predict(X)
+plt.scatter (data['X'], data['Y'], c=data['Cluster'])
+plt.title("k-Means Clustering")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.show()
