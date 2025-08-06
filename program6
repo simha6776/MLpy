@@ -1,0 +1,23 @@
+
+import numpy as np
+X = np.array([[2, 9], [1, 5], [3, 6]], dtype=float) y = np.array([[92], [86], [89]], dtype=float)
+X = X / np.amax (X, axis=0)
+y = y / 100
+def sigmoid(x): return 1 / (1 + np.exp(-x))
+def sigmoid_derivative(x): return x * (1 - x)
+# Initialize weights
+w1 = np.random.rand(2, 3) W2 = np.random.rand(3, 1)
+for
+-
+in range(1000):
+z1 = np.dot (X, w1) a1 = sigmoid (z1) Z2 = np.dot(a1, w2) output = sigmoid(z2)
+-
+error = y output
+d_output = error * sigmoid_derivative (output)
+d_output.dot (w2.T)
+error_hidden =
+d_hidden = error_hidden
+w2 += a1.T.dot (d_output)
+sigmoid_derivative (a1)
+w1 += X.T.dot (d_hidden)
+print("Predicted Output: \n", output)
