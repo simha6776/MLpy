@@ -1,0 +1,19 @@
+
+In [8]: ''8.Write a program to compute summary statistics such as mean, medi and variance for the given different types of data.''
+import pandas as pd
+import numpy as np
+from statistics import mode, StatisticsError
+def summary_stats(data):
+print("Mean:", np.mean(data))
+print("Median:", np.median (data))
+try:
+print("Mode:", mode(data))
+except StatisticsError:
+print("Mode: No unique mode") print("Std Dev: ", np.std(data))
+print("Variance:", np.var(data))
+data = [10, 12, 15, 14, 18, 20, 18, 21, 20, 19] summary_stats (data)
+Mean: 16.7
+Median: 18.0
+Mode: 18
+Std Dev: 3.5510561809129406
+Variance: 12.61
